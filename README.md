@@ -2,7 +2,7 @@
 
 # ![Pixel Launcher Mod](https://images.pling.com/img/00/00/64/57/06/1915907/bazaart-20220915-120717.jpg)<br/>
 **Support only for Android 13**<br/>
-**Current version: v1.5**<br/>
+**Current version: v1.6**<br/>
 **Changelog: [Click here](https://www.pling.com/p/1915907/)**
 
 
@@ -11,10 +11,10 @@
 Add these lines in device.mk or romname_devicename.mk:
 >**_$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)_**
 
->**_PIXEL_LAUNCHER_VARIANT := name_of_variant_** <br/>
+
 >**_ICONS_VARIANT := true_**<br/>
 
-Examples: <br/> PIXEL_LAUNCHER_VARIANT := fullmod1
+Here, in this repo you can find the Pixel launcher of the codename fullmod1 included in the Gapps builds.
 
 You can use these variants for NexusLauncher:<br>
 - `extragrids`: This contains more Grids Options in App Grid
@@ -31,6 +31,8 @@ You can use these variants for NexusLauncher:<br>
 - `fullmod2`: Contains extragrids and glance2
 - `nomod`: Does not contain extragrids or glance1/glance2, basically the Original Pixel Launcher
 <br/>
+
+For the above mod versions that aren't included and you wish to include in builds kindly pls. check the main repo of the mod.
 
 **Glance Greetings Type 1*
 # ![Preview](https://graph.org/file/585ec9f42f519a83571f4.jpg)<br/>
