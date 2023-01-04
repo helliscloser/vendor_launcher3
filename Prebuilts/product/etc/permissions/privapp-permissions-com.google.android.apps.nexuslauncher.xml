@@ -37,8 +37,10 @@
         <permission name="android.permission.READ_DEVICE_CONFIG"/>
         <permission name="android.permission.ROTATE_SURFACE_FLINGER"/>
         <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS"/>
         <permission name="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS"/>
         <permission name="com.google.android.apps.nexuslauncher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+        <permission name="com.google.pixel.exo.PUSH_STREAMING_CONTENT"/>
     </privapp-permissions>
 </permissions>
