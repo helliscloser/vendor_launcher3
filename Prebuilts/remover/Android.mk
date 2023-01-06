@@ -39,6 +39,7 @@ LOCAL_OVERRIDES_PACKAGES := \
         PixelLauncherCustomOverlay \
         PixelLauncherIconsOverlay \
         PixelThemesStub \
+        PixelThemesStub2022_and_newer \
         QuickAccessWallet \
         ShadyQuickStep \
         TrebuchetQuickStep \

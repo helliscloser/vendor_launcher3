@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2022 Ardjlon
-# Copyright (C) 2022 Team Files
+# Copyright (C) 2022 tg@hopethislasts
+# Copyright (C) 2022 𝑨𝒎𝒓 𝑮𝒂𝒎𝒂𝒍
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,18 +15,15 @@
 # limitations under the License.
 
 # Copy permission files
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/PixelLauncher/Prebuilts/product/etc/default-permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/default_permissions)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/PixelLauncher/Prebuilts/product/etc/permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/permissions)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/product/etc/default-permissions,$(TARGET_COPY_OUT_PRODUCT)/etc/default_permissions)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/product/etc/sysconfig,$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/system_ext/etc,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc)
 
-ifeq ($(filter $(modules-get-list),$(preferred_apps_google)),)
 PRODUCT_COPY_FILES += \
-    vendor/PixelLauncher/Prebuilts/product/etc/sysconfig/pixel-launcher-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel-launcher-hiddenapi-package-whitelist.xml
-    $(warning Excluding some permissions because exists)
-else
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/PixelLauncher/Prebuilts/product/etc/preferred-apps,$(TARGET_COPY_OUT_PRODUCT)/etc/preferred-apps)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/PixelLauncher/Prebuilts/product/etc/sysconfig,$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig)
-endif
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/PixelLauncher/Prebuilts/system_ext/etc,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc)
+$(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/system_ext/priv-app/Launcher3QuickStep/oat,$(TARGET_COPY_OUT_SYSTEM)/system_ext/priv-app/Launcher3QuickStep/oat) \
+$(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/system_ext/priv-app/OmniJaws/oat,$(TARGET_COPY_OUT_SYSTEM)/system_ext/priv-app/OmniJaws/oat) \
+$(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/system_ext/priv-app/QuickAccessWallet/oat,$(TARGET_COPY_OUT_SYSTEM)/system_ext/priv-app/QuickAccessWallet/oat) \
+$(call find-copy-subdir-files,*,vendor/launcher3mod/Prebuilts/system_ext/priv-app/ThemePicker/oat,$(TARGET_COPY_OUT_SYSTEM)/system_ext/priv-app/ThemePicker/oat) \
 
 # Properties
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -34,10 +31,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Build apps
 PRODUCT_PACKAGES += \
-   NexusLauncherReleaseMod \
-   PixelRecentsProvider \
+   Launcher3QuickStepMod \
+   QuickSwitchOverlayMod \
    PixelThemesStubMod \
-   QuickAccessWalletMod \
+   OmniJawsMod \
    Remover \
-   ThemedIconsOverlay \
-   WallpaperPickerGoogleReleaseMod
+   QuickAccessWalletMod \
+   ThemePickerMod
