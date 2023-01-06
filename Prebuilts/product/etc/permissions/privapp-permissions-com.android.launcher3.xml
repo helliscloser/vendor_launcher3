@@ -4,6 +4,7 @@ This XML fixes DT2S
 -->
 <permissions>
     <privapp-permissions package="com.android.launcher3">
-        <permission name=""android.permission.DEVICE_POWER""/>
+        <permission name="android.permission.DEVICE_POWER"/>
+    </privapp-permissions>   
 </permissions>
  
