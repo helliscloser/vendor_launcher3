@@ -8,6 +8,8 @@ Clone the repo
 
  Add these lines in device.mk or romname_devicename.mk:
 >**_$(call inherit-product, vendor/launcher3mod/config.mk)_**
-
+<br>
+Repo By: https://t.me/hopethislasts<br>
+<br>
 ## Credits<br>
 https://t.me/AMRGAMAL1Store For Modded Launcher3 and fixing most errors.
